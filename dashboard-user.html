@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Usuario - CECYTO Vial</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .card {
+            border-radius: 0.5rem;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">CECYTO Vial [Usuario]</a>
+            <div class="d-flex">
+                <a href="index.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <!-- Pestañas de Navegación -->
+        <ul class="nav nav-tabs" id="userTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold text-danger" id="reglamento-tab" data-bs-toggle="tab" data-bs-target="#reglamento" type="button" role="tab">Reglamento y Guía</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold text-danger" id="concientizacion-tab" data-bs-toggle="tab" data-bs-target="#concientizacion" type="button" role="tab">Seguridad Vial</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold text-danger" id="evaluacion-tab" data-bs-toggle="tab" data-bs-target="#evaluacion" type="button" role="tab">Evaluación Interactiva</button>
+            </li>
+        </ul>
+
+        <div class="tab-content bg-white p-4 border border-top-0 rounded-bottom shadow-sm" id="userTabContent">
+            
+            <!-- Sección 1: Reglamento -->
+            <div class="tab-pane fade show active" id="reglamento" role="tabpanel">
+                <h3 class="text-danger mb-3">Repositorio Digital: Reglamento de Tránsito (Villa Victoria / EDOMEX)</h3>
+                <p class="text-muted">Consulta interactiva de las faltas y normas viales más comunes.</p>
+                
+                <div class="mb-3">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Buscar infracción o norma vial...">
+                </div>
+
+                <div class="row mt-4" id="reglamentoContainer">
+                    <!-- Dinámico vía JS -->
+                </div>
+            </div>
+
+            <!-- Sección 2: Concientización -->
+            <div class="tab-pane fade" id="concientizacion" role="tabpanel">
+                <h3 class="text-danger mb-3">Cultura, Prevención e Impacto Social de los Accidentes Viales</h3>
+                <p class="text-muted">En el municipio de Villa Victoria, la Secretaría de Seguridad del Estado de México (EDOMEX) y la comunidad estudiantil de CECYTO promueven estrategias integrales orientadas a la salvaguarda de la vida humana.</p>
+                
+                <div class="row mt-4">
+                    <div class="col-md-4 mb-3">
+                        <div class="p-3 border rounded bg-light h-100">
+                            <h5 class="fw-bold text-danger">Impacto Físico</h5>
+                            <p class="small text-muted mb-0">Lesiones permanentes, traumatismos y pérdida de vidas humanas a causa de la imprudencia vial.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="p-3 border rounded bg-light h-100">
+                            <h5 class="fw-bold text-danger">Impacto Emocional</h5>
+                            <p class="small text-muted mb-0">El sufrimiento psicológico y la ruptura familiar provocados por incidentes que pudieron prevenirse.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="p-3 border rounded bg-light h-100">
+                            <h5 class="fw-bold text-danger">Impacto Económico</h5>
+                            <p class="small text-muted mb-0">Altos costos en gastos médicos, pago de multas y corralón que afectan gravemente la economía familiar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección 3: Evaluación -->
+            <div class="tab-pane fade" id="evaluacion" role="tabpanel">
+                <h3 class="text-danger mb-3">Cuestionario de Concientización y Normativa Vial</h3>
+                <p class="text-muted">Responde las siguientes preguntas evaluadas mediante JavaScript.</p>
+                
+                <form id="quizForm">
+                    <div id="quizContainer">
+                        <!-- Generado por JS -->
+                    </div>
+                    <button type="button" class="btn btn-danger mt-3" onclick="evaluarQuizJS()">Calificar Evaluación</button>
+                </form>
+
+                <div id="quizResult" class="mt-3"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

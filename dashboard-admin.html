@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador - CECYTO Vial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar Admin -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">CECYTO Vial [Panel Administrador]</a>
+            <div class="d-flex">
+                <a href="index.html" class="btn btn-outline-light btn-sm">Cerrar Sesión</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h2 class="text-dark mb-4">Gestión y Estadísticas Históricas (Villa Victoria)</h2>
+        
+        <!-- Tarjetas de Resumen Estadístico -->
+        <div class="row text-white mb-4">
+            <div class="col-md-4">
+                <div class="card bg-danger p-3 shadow-sm">
+                    <h5>Infracciones Registradas</h5>
+                    <h3>1,245</h3>
+                    <small>Histórico anual municipal</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-secondary p-3 shadow-sm">
+                    <h5>Conductores Reeducados</h5>
+                    <h3>480</h3>
+                    <small>A través de la plataforma</small>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-dark p-3 shadow-sm">
+                    <h5>Usuarios Activos</h5>
+                    <h3>950</h3>
+                    <small>Comunidad CECYTO</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Gestión de Faltas -->
+        <div class="card shadow-sm border-0">
+            <div class="card-body">
+                <h4 class="card-title text-danger mb-3">Registro de Faltas Viales Frecuentes</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>ID</th>
+                                <th>Tipo de Falta</th>
+                                <th>Zona Principal</th>
+                                <th>Sanción Estimada</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>Exceso de velocidad</td>
+                                <td>Av. Central Villa Victoria</td>
+                                <td>Multa Económica</td>
+                                <td><button class="btn btn-sm btn-outline-danger">Editar</button></td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>No portar casco</td>
+                                <td>Zona Escolar CECYTO</td>
+                                <td>Amonestación / Retención</td>
+                                <td><button class="btn btn-sm btn-outline-danger">Editar</button></td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Estacionarse en lugar prohibido</td>
+                                <td>Centro Municipal</td>
+                                <td>Inmovilizador</td>
+                                <td><button class="btn btn-sm btn-outline-danger">Editar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
